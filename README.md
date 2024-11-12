@@ -58,5 +58,11 @@
 | Contributor  | Subject matter experties | E-mail |
 | ------------- | ------------- | ------------- |
 | Vrunda Gadesha  | Large Language Models & Prompt engineering  | vrunda.gadesha@ibm.com |
+| Anna Gutowska  | Agentic Frameworks & Data Augmentation  | anna.gutowska@ibm.com |
 
+<h2>For contributors:</h2>
+Make sure to install necessary libraries:
 
+```
+pip install -r requirements.txt
+```

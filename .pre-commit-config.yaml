@@ -1,0 +1,21 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+    -   id: black
+-   repo: https://github.com/ibm/detect-secrets   #see .secrets.baseline file for results
+    rev: 0.13.1+ibm.61.dss
+    hooks:
+    -   id: detect-secrets
+        exclude: generative-ai/multimodal-ai.ipynb,generative-ai/prompt-tuning.ipynb
+        args: [--baseline, .secrets.baseline, --use-all-plugins, --no-keyword-scan ]
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.9.0
+    hooks:
+    -   id: reorder-python-imports
+        language_version: python3
