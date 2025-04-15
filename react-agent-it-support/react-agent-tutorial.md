@@ -22,7 +22,7 @@ Within LangGraph, the “state” feature serves as a memory bank that records a
 
 ## Steps
 
-### Step 1. Set up your environment
+### Step 1. Generate your watsonx.ai credentials
 While you can choose from several tools, this tutorial walks you through how to set up an IBM account to use a Jupyter Notebook. 
 
 1. Log in to [watsonx.ai](https://dataplatform.cloud.ibm.com/registration/stepone?context=wx&apps=all) using your IBM Cloud® account.
@@ -65,8 +65,24 @@ export PYTHONPATH=$(pwd):${PYTHONPATH}
 
 To set up your environment, follow along with the instructions in the [README.md](https://github.com/IBM/watsonx-developer-hub/tree/main/agents/base/langgraph-react-agent) file on Github. This set up requires several commands to be run on your IDE or command line.
 
+### Step 3. Set the environment variables
 
-### Step 3. Upload your data to IBM Cloud Object Storage
+In the `config.toml` file, you will find the following blank credentials that must be filled in before attempting to deploy your agent. Your `watsonx_apikey` and `watsonx_url` were initialized in step 1 of this tutorial. Next, follow along with the simple form found on the [Developer Access](https://dataplatform.cloud.ibm.com/developer-access) page to select your deployment space or create a new one. There, you can retrieve your `space_id` needed to connect our agent to the watsonx.ai deployment. Lastly, your `model_id` is set to the IBM Granite 3.2 model. 
+
+```
+[deployment]
+  watsonx_apikey = ""
+  watsonx_url = ""  # should follow the format: `https://{REGION}.ml.cloud.ibm.com`
+  space_id = "" # found in the "Manage" tab of your Deployment or in the Developer Access page here: https://dataplatform.cloud.ibm.com/developer-access
+
+[deployment.custom]
+# during creation of deployment additional parameters can be provided inside `CUSTOM` object for further referencing
+# please refer to the API docs: https://cloud.ibm.com/apidocs/machine-learning-cp#deployments-create
+  model_id = "ibm/granite-3-2-8b-instruct"
+  thread_id = "thread-1" # More info here: https://langchain-ai.github.io/langgraph/how-tos/persistence/
+```
+
+### Step 4. Upload your data to IBM Cloud Object Storage
 
 Our agent requires a data source to provide up-to-date information and add new data. We will store our data file in IBM Cloud® Object Storage. 
 
@@ -74,7 +90,7 @@ Our agent requires a data source to provide up-to-date information and add new d
 2. In the left-side menu, select [Resource list](https://cloud.ibm.com/resources). Using the Create resource button, create a new Cloud Object Storage instance or simply use [this link](https://cloud.ibm.com/objectstorage/create?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2FY2F0ZWdvcnk9c3RvcmFnZSNhbGxfcHJvZHVjdHM%3D). 
 3. Open your newly created IBM Cloud Storage Instance, create a new bucket. For this tutorial, you can select the Smart Tier which is the free tier. When directed, upload your file. For the sample file, refer to the tickets.csv file in the [GitHub repository](https://github.com/IBM/ibmdotcom-tutorials).
 
-### Step 4. Establish your data connection
+### Step 5. Establish your data connection
 
 To provide the ReAct agent with IT ticket management functionality, we must connect to our data source in IBM Cloud Object Storage. For this step, we can use the [`ibm_boto3` library](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-python).
 
@@ -95,7 +111,7 @@ In `tools.py`, the `COS_ENDPOINT`, `COS_INSTANCE_CRN`, `BUCKET_NAME` and `CSV_FI
   )
   ```
 
-### Step 5. Create your custom tools
+### Step 6. Create your custom tools
 
 Our agent will be able to both read and write data in our file. First, let's create the tool to read data using the LangChain `@tool` decorator. 
 
@@ -175,9 +191,7 @@ One last tool we must add to our `tools.py` file is the `get_todays_date` tool w
 
 These tools are imported in the `agent.py` file and passed to the prebuilt LangGraph `create_react_agent` function serving as the agent executor. Other parameters include the large language model initialized by using the `ChatWatsonx` class which allows for tool calling on watsonx.ai, the memory saver and system prompt. Note, some prompts will behave better than others and so, some level of prompt engineering might be required depending on the LLM you choose. 
 
-Before deploying your agent, remember to complete all the necessary information in the `config.toml` file. 
-
-### Step 6. Chat with your agent
+### Step 7. Chat with your agent
 
 There are three ways to chat with your agent.
 
