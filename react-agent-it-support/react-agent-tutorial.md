@@ -1,8 +1,8 @@
-# Deploy an IT support LangGraph ReAct agent with Llama 4 on watsonx.ai
+# Deploy an IT support LangGraph ReAct agent with IBM Granite on watsonx.ai
 
 **Author:** Anna Gutowska 
 
-In this tutorial, you will build a [ReAct (Reasoning and Action) AI agent](https://www.ibm.com/think/topics/react-agent) with the open-source [LangGraph](https://www.ibm.com/think/topics/langgraph) framework by using [Llama 4 Scout model](https://www.llama.com/) through the IBM® watsonx.ai® [API](https://www.ibm.com/think/topics/api) in Python. The use case is to manage existing IT support tickets and to create new ones.
+In this tutorial, you will build a [ReAct (Reasoning and Action) AI agent](https://www.ibm.com/think/topics/react-agent) with the open-source [LangGraph](https://www.ibm.com/think/topics/langgraph) framework by using an [IBM Granite model](https://www.ibm.com/granite) through the IBM® watsonx.ai® [API](https://www.ibm.com/think/topics/api) in Python. The use case is to manage existing IT support tickets and to create new ones.
 
 ## What is a ReAct agent?
 
@@ -239,4 +239,4 @@ Great! The agent successfully added the ticket to the file.
 
 ## Conclusion 
 
-In this tutorial, you created an agent with the ReAct framework that uses decision making to solve complex tasks such as retrieving and creating support tickets. There are several AI models out there that allow for agentic tool calling such as Google's Gemini, IBM's Granite and OpenAI's GPT-4. In our project, we used a Llama 4 Scout AI model through the watsonx.ai API. The model behaved as expected both locally and when deployed on watsonx.ai. As a next step, check out the [LlamaIndex](https://github.com/IBM/watsonx-developer-hub/tree/main/agents/base/llamaindex-websearch-agent) and [crewAI](https://github.com/IBM/watsonx-developer-hub/tree/main/agents/base/crewai-websearch-agent) [multiagent](https://www.ibm.com/think/topics/multiagent-system) templates available in the [watsonx-developer-hub GitHub repository](https://github.com/IBM/watsonx-developer-hub/tree/main/agents) for building AI agents. 
+In this tutorial, you created an agent with the ReAct framework that uses decision making to solve complex tasks such as retrieving and creating support tickets. There are several AI models out there that allow for agentic tool calling such as Google's Gemini, IBM's Granite and OpenAI's GPT-4. In our project, we used an IBM Granite AI model through the watsonx.ai API. The model behaved as expected both locally and when deployed on watsonx.ai. As a next step, check out the [LlamaIndex](https://github.com/IBM/watsonx-developer-hub/tree/main/agents/base/llamaindex-websearch-agent) and [crewAI](https://github.com/IBM/watsonx-developer-hub/tree/main/agents/base/crewai-websearch-agent) [multiagent](https://www.ibm.com/think/topics/multiagent-system) templates available in the [watsonx-developer-hub GitHub repository](https://github.com/IBM/watsonx-developer-hub/tree/main/agents) for building AI agents. 
