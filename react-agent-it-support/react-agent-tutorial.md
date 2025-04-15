@@ -173,7 +173,7 @@ One last tool we must add to our `tools.py` file is the `get_todays_date` tool w
     return date 
   ```
 
-  To grant our agent access to these tools, we have added them to the `TOOLS` list in the `extensions` module's [**init**.py](src/langgraph_react_agent/__init__.py). This list should be the contents of your `init.py` file in the `src/langgraph_react_agent` directory.
+  To grant our agent access to these tools, we have added them to the `TOOLS` list in the `extensions` module's [init.py](src/langgraph_react_agent/__init__.py) file. This list should be the contents of your `init.py` file in the `src/langgraph_react_agent` directory.
 
   ```python 
   from .tools import (
@@ -209,7 +209,7 @@ The final option is to access the agent in the Deployments space on watsonx.ai. 
 
 To run the deployment script, initialize the `deployment_id` variable in the [query_existing_deployment.py](examples/query_existing_deployment.py) file.
 
-The `deployment_id` of your deployment can be obtained by running [scripts/deploy.sh](scripts/deploy.py).
+The `deployment_id` of your deployment can be obtained by running the [scripts/deploy.py](scripts/deploy.py).
 
 Next, run the deployment script. 
   ```sh
