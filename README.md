@@ -32,3 +32,31 @@ Note: YMMV - as different machines have different operating parameters, we canno
 - For some tutorials we may be importing items and we can follow those instructions separately, but if not let’s continue with a fresh project.
 
 If you have any questions, please reach out in our [Github Discussions](https://github.com/IBM/ibmdotcom-tutorials/discussions).
+
+## Creating a GitHub Issue
+
+If you need assistance, the best way to get help is by opening a GitHub issue.
+This allows us track and resolve  problems efficiently, while also helping others
+who may encounter similar issues. When submitting an issue, please provide the
+following details:  
+
+**Required Information:**
+
+- **Tutorial Name**: Which specific tutorial you have an issue with
+- **Step/Section**: Where in the tutorial the issue occurred
+- **Expected Behavior**: What you expected to happen
+- **Actual Behavior**: What actually happened
+- **Error Messages**: Any error messages you received (copy/paste the full text)
+- **Environment Details**:
+  - Operating system (Windows, macOS, Linux)
+  - Browser version (if applicable)
+  - Any relevant software versions
+
+**Optional but Helpful:**
+
+- Screenshots of the issue
+- Steps you've already tried to resolve the problem
+- Any additional context that might be relevant
+
+We strive to respond to issues as quickly as possible but appreciate your patience
+as we work to address your concerns.  
