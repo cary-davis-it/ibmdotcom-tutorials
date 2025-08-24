@@ -1,46 +1,34 @@
-# IBM Tutorials Documentation
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
-This repository contains the documentation for IBM Tutorials.
+# Welcome to IBM Tutorials :bee:
 
-Check our [Interactive site here](https://ibm.github.io/ibmdotcom-tutorials/)
+Welcome to the centralized repository for all technical explainers, tutorials, and demos developed by the [ibm.com](https://www.ibm.com/think) technical writing team. This repository focuses on cutting-edge technologies in the fields of:
 
-### Prerequisites
+[Generative AI](https://github.com/IBM/ibmdotcom-tutorials/blob/main/docs/tutorials-list.md) | [Machine Learning](https://www.ibm.com/think/topics/machine-learning) | [LLMs](https://www.ibm.com/granite) | [Prompt Engineering](https://github.com/IBM/ibmdotcom-tutorials/blob/main/docs/tutorials-list.md#prompt-engineering)
 
-- Python 3.x
-- pip (Python package installer)
+Visit the repo's [docs site](https://ibm.github.io/ibmdotcom-tutorials/) or follow along here to get started!
 
-### Installation
+# Getting Started :gear:
 
-1. Clone this repository:
-```bash
-git clone <your-repo-url>
-cd ibm-tutorials
-```
+# Local Setup
+For each tutorial or application, the local set up can vary. We recommend having Python 3.11 and pip installed. For any activities with JavaScript/TypeScript, we recommend having NodeJS version 23.10.0 and npm installed, though yarn may also be required depending on the project.
 
-2. Install MkDocs and the required theme:
-```bash
-pip install mkdocs mkdocs-material
-```
+It may also be necessary to have a local version of [Granite](https://www.ibm.com/granite), [ollama](https://ollama.com/), and other tools. Please be sure to check the README for any codebase or the instructions in any tutorial to ensure you have the proper set up prior to attempting any coding or notebook runs.
 
-### Project Structure
+Note: YMMV - as different machines have different operating parameters, we cannot guarantee all setups will run locally. If you have any questions, please reach out in our [Github Discussions](https://github.com/IBM/ibmdotcom-tutorials/discussions).
 
-```
-ibm-tutorials/
-├── docs/               # Documentation source files
-├── stylesheets/        # Custom CSS styles
-└── mkdocs.yml         # MkDocs configuration file
-```
+# Cloud Setup - IBM Cloud
+- Head to [IBM Cloud](https://cloud.ibm.com/login)
+- Click the “Create an account” link
+- Enter your email and preferred password using the safe password guidelines then click next
+- Wait for a verification code to come through to the email address provided
+- After being verified, enter your first and last name then click next, accept the Terms and Conditions then click continue to get into our IBM Cloud account.
 
+# Cloud Setup - watsonX
+- Navigate to [watsonX](https://dataplatform.cloud.ibm.com/login)
+- Head to the “hamburger” menu in the upper left corner of the screen and open the navigation menu (assuming it isn’t already open)
+- Click on the Project menu and select “View All Projects”
+- You may already have a sandbox project available, but for the purpose of our tutorials we’ll create a new project by clicking the New Project button in the right corner above the projects list.
+- For some tutorials we may be importing items and we can follow those instructions separately, but if not let’s continue with a fresh project.
 
-
-## Contributing
-
-1. Create a new branch for your changes
-2. Make your changes to the documentation
-3. Test your changes locally using `mkdocs serve`
-4. Submit a pull request
-
-
-## License
-
-[Apache 2.0](https://ibm.github.io/ibmdotcom-tutorials/license/)
+If you have any questions, please reach out in our [Github Discussions](https://github.com/IBM/ibmdotcom-tutorials/discussions).
